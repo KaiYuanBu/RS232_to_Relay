@@ -13,12 +13,22 @@ int main() {
         // Turn RTS ON
         serialPort.SetRTS(true);
         std::cout << "Relay ON" << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(15));
+        std::this_thread::sleep_for(std::chrono::seconds(10));
 
         // Turn RTS OFF
         serialPort.SetRTS(false);
         std::cout << "Relay OFF" << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(15));
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+
+        // Turn RTS ON
+        serialPort.SetRTS(true);
+        std::cout << "Relay ON" << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+
+        // Turn RTS OFF
+        serialPort.SetRTS(false);
+        std::cout << "Relay OFF" << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(10));
 
         serialPort.Close();
     } catch (const std::exception& e) {
